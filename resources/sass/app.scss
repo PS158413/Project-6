@@ -1,0 +1,147 @@
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+.hero-slick .slick-track {
+    display: flex;
+  }
+  
+  .slick-prev::before,
+  .slick-next::before {
+    opacity: 0;
+    transition: opacity .3s $cubic-bezier, transform .3s $cubic-bezier;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -25%) scaleX(0);
+    transform-origin: center;
+    background-size: cover;
+    content: '';
+    width: 18px;
+    height: 2px;
+    background-color: black;
+  }
+  
+  .slick-disabled {
+    opacity: 0.4;
+    pointer-events: none !important;
+  }
+  
+  .slick-prev {
+    position: absolute;
+    bottom: 4px;
+    left: 5px;
+    background-color: red;
+  }
+  
+  .slick-next {
+    position: absolute;
+    bottom: 4px;
+    left: 70px;
+    background-color: red;
+  }
+  
+  .slick-arrow.slick-disabled {
+    opacity: .3;
+    cursor: auto;
+  
+    &:hover {
+      transform: none;
+    }
+  }
+  
+  .slick-dots {
+    display: flex;
+    grid-gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    button {
+      font-size: 0;
+      color: transparent;
+      display: block;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background-color: $grey-400;
+      box-sizing: content-box;
+      transition: all .2s $cubic-bezier;
+    }
+  
+    button:hover,
+    button[aria-selected="true"] {
+      background-color: $grey-900;
+    }
+  }
+  
+  
+    .slick-track {
+      position: relative;
+      left: 0;
+      top: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  
+    }
+
+  
+  //instagram slider
+  @media (max-width: 1023px) {
+    .slick-init.slick-swipe-mobile {
+      display: flex;
+      grid-column-gap: 8px;
+      overflow-x: scroll;
+  
+      > * {
+        flex-shrink: 0;
+      }
+    }
+  }
+  
+  .instagram-slider-container {
+    .slick-slide, .slick-current, .slick-active {
+      margin-right: 4px;
+      margin-left: 4px;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+
+      .slick-list {
+        padding: 0 15% 0 0 !important;
+ 
+  
+      //.slick-slide {
+      //  width: auto !important;
+      //  margin-right: 10px;
+      //}
+  
+      .slick-track {
+        .slick-current, .slick-active {
+          width: auto !important;
+        }
+      }
+  
+    }
+  }
+  
+  @media only screen and (max-width: 769px) {
+  
+  
+      .slick-list {
+        padding: 0 15% 0 0 !important;
+      }
+ 
+  }
+  
+  @media (min-width: 1536px) {
+    .slick-buttons-bottom-right {
+      .slick-prev,
+      .slick-next {
+        width: 64px;
+        height: 64px;
+      }
+  
+      .slick-prev {
+        right: 64px;
+      }
+    }
+  }

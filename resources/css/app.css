@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.quantity_field{
+    width: 65px;
+    margin-left: 10px;
+}
+body{
+    overflow-x: hidden;
+}
+.slick-disabled {
+    opacity: 0.4;
+    pointer-events: none !important;
+  }
